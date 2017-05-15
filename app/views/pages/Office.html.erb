@@ -1,0 +1,58 @@
+
+<div class="jumbotron">
+<h1><%= current_office.business_name %> </h1> 
+<h2><%= current_office.business_category %></h2>
+
+  <p><%= current_office.address%> <%= current_office.city%> <%= current_office.state%> <%= current_office.zip_code%></p>
+  <p><%= current_office.email%> </p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn less</a></p>
+</div>
+
+<!--THe Body -->
+
+
+<div class="row">
+	<div class="col-xs-3">
+	<%=render '/components/vet_form'%>
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>stats</p>
+			</div>
+		</div>
+	</div>
+	
+<div class="row">
+	<div class="col-xs-6">
+	<% for @v in @vets %>
+		<div class="panel panel=default">
+			<div class="panel-body">
+
+			<p><%= image_tag @v.image.url(:thumb) %></p>	
+			<p> Vet Name:  <%= @v.vet_name %>  </p>
+			|<p> About: <%= @v.about %>  </p>
+          <p>Website <%= @v.website %> | Website <%= @v.facebook %> | Website <%= @v.twitter %> | Website <%= @v.linkedin%></p>
+			</div>
+		</div>
+		<%end%>
+	</div>
+<div class="row">
+	<div class="col-xs-3">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>about</p>
+			</div>
+		</div>
+	</div>
+<!-- second row  -->
+<div class="row">
+	<div class="col-xs-3 col-xs-offset-9">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>trends</p>
+			</div>
+		</div>
+	</div>
+  </div>
+ 	</div>
+		</div>
+			</div>

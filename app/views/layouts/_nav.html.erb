@@ -1,0 +1,7 @@
+<% if user_signed_in?%>
+<%= render '/layouts/nav_user' %>
+<%elsif office_signed_in?%>
+<%=render 'layouts/nav_office'%>
+<%else%>
+<%= render '/layouts/nav_guest' %>
+<%end%>

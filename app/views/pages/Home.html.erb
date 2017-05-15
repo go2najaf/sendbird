@@ -1,0 +1,46 @@
+
+
+<!--THe Body -->
+
+
+<div class="row">
+	<div class="col-xs-3">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>stats</p>
+			</div>
+		</div>
+	</div>
+	
+<div class="row">
+	<div class="col-xs-6">
+	<% for @v in @vets %>
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p><%= image_tag @v.image.url(:thumb) %></p>
+			<p> Vet Name:  <%= @v.vet_name %> | About:  <%= @v.about %> | Website:  <%= @v.website %>  </p>
+			</div>
+		</div>
+		<%end%>
+	</div>
+<div class="row">
+	<div class="col-xs-3">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>about</p>
+			</div>
+		</div>
+	</div>
+<!-- second row  -->
+<div class="row">
+	<div class="col-xs-3 col-xs-offset-9">
+		<div class="panel panel=default">
+			<div class="panel-body">
+			<p>trends</p>
+			</div>
+		</div>
+	</div>
+  </div>
+ 	</div>
+		</div>
+			</div>

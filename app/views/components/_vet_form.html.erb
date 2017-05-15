@@ -1,0 +1,40 @@
+<%= form_for @newVet, url: vets_path, html: { multipart: true } do |f| %>
+
+ <div class="field">
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </div>
+   <div class="field">
+    <%= f.label :vet_name %><br />
+    <%= f.text_field :vet_name, autofocus: true %>
+  </div>
+   <div class="field">
+    <%= f.label :about %><br />
+    <%= f.text_field :about, autofocus: true %>
+  </div>
+
+   <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website, autofocus: true %>
+  </div>
+
+    <div class="field">
+    <%= f.label :facbook %><br />
+    <%= f.text_field :facebook, autofocus: true %>
+  </div>
+
+     <div class="field">
+    <%= f.label :twitter %><br />
+    <%= f.text_field :twitter, autofocus: true %>
+  </div>
+
+     <div class="field">
+    <%= f.label :linkedin%><br />
+    <%= f.text_field :linkedin, autofocus: true %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Add Pet" %>
+  </div>
+<% end %>
